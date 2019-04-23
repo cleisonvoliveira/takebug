@@ -57,55 +57,70 @@ export default class CadastroDefeito extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 20}}>
-                <center><h4>Registrar Defeito</h4></center>
+            <div>
+                <div className="text-center font-weight-bolder p-3">
+                   Registrar Defeito
+                </div>
+                
 
                 <form onSubmit={this.onSubmit}>
 
-                    <div className="form-group">
-                        <label>Nº Projeto:* </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.todo_description}
-                                onChange={this.onChangeTodoDescription}
-                                />
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Nº Projeto:* </label>
+                        <div class="col-sm-10">
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.todo_description}
+                                    onChange={this.onChangeTodoDescription}
+                                    />
+                        </div>
                     </div>
 
-                    <div className="form-group">
-                        <label>Funcionalidade:* </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.todo_responsible}
-                                onChange={this.onChangeTodoResponsible}
-                                />
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Funcionalidade:* </label>
+                        <div class="col-sm-10">
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.todo_responsible}
+                                    onChange={this.onChangeTodoResponsible}
+                                    />
+                        </div>
                     </div>
 
-                    <div className="form-group">
-                        <label>Cenário:* </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.todo_responsible}
-                                onChange={this.onChangeTodoResponsible}
-                                />
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Cenário:* </label>
+                        <div class="col-sm-10"> 
+                            <input  type="text"
+                                    className="form-control"
+                                    value={this.state.todo_responsible}
+                                    onChange={this.onChangeTodoResponsible}
+                                    />
+                        </div>
                     </div>
 
-                    <div className="form-group">
-                        <label>Resultado Obtido:* </label>
-                        <textarea className="form-control rounded-0" 
-                                   rows="2"
-                                   value={this.state.todo_responsible}
-                                   onChange={this.onChangeTodoResponsible}/>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Resultado Obtido:* </label>
+                        <div class="col-sm-10"> 
+                            <textarea className="form-control rounded-0" 
+                                    rows="2"
+                                    value={this.state.todo_responsible}
+                                    onChange={this.onChangeTodoResponsible}/>
+                        </div>
                     </div>
 
-                    <div className="form-group">
-                        <label>Resultado Esperado:* </label>
-                        <textarea className="form-control rounded-0" 
-                                   rows="2"
-                                   value={this.state.todo_responsible}
-                                   onChange={this.onChangeTodoResponsible}/>
+                    <div className="form-group row">
+                        <label className="col-sm-2 col-form-label">Resultado Esperado:* </label>
+                        <div class="col-sm-10">
+                            <textarea className="form-control rounded-0" 
+                                    rows="2"
+                                    value={this.state.todo_responsible}
+                                    onChange={this.onChangeTodoResponsible}/>
+                        </div>
                     </div>
 
-                    <label>Gravidade:* </label>
+                    <div className="form-group row"> 
+                    <label className="col-sm-2 col-form-label">Gravidade:* </label>
+                    <div class="col-sm-10">
                     <div className="form-group">
                         <div className="form-check form-check-inline">
                             <input  className="form-check-input"
@@ -150,6 +165,8 @@ export default class CadastroDefeito extends Component {
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Baixo</label>
+                        </div>
+                        </div>
                         </div>
                     </div>
 
@@ -216,7 +233,7 @@ export default class CadastroDefeito extends Component {
                         <input type="file" className="form-control"/>
                     </div>
 
-                    <div className="form-group" style={{float: "right"}}>
+                    <div className="form-group float-right clearfix">
                         <input type="submit" value="Cancelar" className="btn btn-primary" />
                         <input type="submit" value="Salvar" style={{margin: 3}} className="btn btn-primary" />                  
                     </div>
